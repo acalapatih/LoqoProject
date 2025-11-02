@@ -1,0 +1,270 @@
+/* Variabel Warna Sesuai Permintaan */
+:root {
+  --color-orange: #ff7900;
+  --bg-table-header: #f5f7fa;
+  --color-border: #e6e9f0;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #555;
+  --color-bg-page: #ffffff;
+  --color-status-aktif: #34c759;
+  --color-status-menipis: #ff9500;
+  --color-status-nonaktif: #8e8e93;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  background-color: #f9f9f9; /* Background halaman sedikit abu-abu */
+}
+
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== Header / Navigasi Atas ===== */
+.dashboard-header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background-color: var(--color-bg-page);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.dashboard-header-nav .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.dashboard-header-nav .user-menu {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.dashboard-header-nav .user-menu .icon {
+  margin-left: 8px;
+  font-size: 0.8rem;
+}
+
+/* ===== Konten Utama ===== */
+.dashboard-content {
+  padding: 2rem 2.5rem;
+  flex-grow: 1;
+}
+
+.content-header h1 {
+  font-size: 1.75rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--color-text-primary);
+}
+
+.content-header p {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ===== Filter & Tombol Aksi ===== */
+.filter-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.filter-actions .filters {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.filter-actions input,
+.filter-actions select,
+.filter-actions .btn-sort {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background-color: var(--color-bg-page);
+}
+
+.filter-actions .search-input {
+  min-width: 200px;
+}
+
+.filter-actions .actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary {
+  background-color: var(--color-bg-page);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+}
+.btn-secondary:hover {
+  background-color: #f5f5f5;
+}
+
+.btn-primary {
+  background-color: var(--color-orange);
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #e66c00;
+}
+
+/* Tombol "Lihat Detail" agar terlihat seperti link */
+.action-link-btn {
+  background: none;
+  border: none;
+  color: var(--color-orange);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0;
+}
+.action-link-btn:hover {
+  text-decoration: underline;
+}
+
+/* ===== Tabel Produk ===== */
+.product-table-container {
+  background-color: var(--color-bg-page);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden; /* Agar border-radius rapi */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table thead tr {
+  background-color: var(--bg-table-header);
+  border-bottom: 1px solid var(--color-border);
+}
+
+table th {
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+table td {
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+table tbody tr:last-child td {
+  border-bottom: none; /* Hapus border di baris terakhir */
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.product-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.action-dots {
+  margin-left: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ===== Status Badge ===== */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-badge.aktif {
+  color: var(--color-status-aktif);
+  background-color: #e0f8e6;
+}
+.status-badge.menipis {
+  color: var(--color-status-menipis);
+  background-color: #fff6e6;
+}
+.status-badge.nonaktif {
+  color: var(--color-status-nonaktif);
+  background-color: #f2f2f7;
+}
+
+/* ===== Paginasi ===== */
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.pagination-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pagination-info select {
+  padding: 0.4rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pagination-controls button {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-page);
+  min-width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.pagination-controls button.active {
+  background-color: var(--color-orange);
+  border-color: var(--color-orange);
+  color: white;
+  font-weight: bold;
+}
+.pagination-controls button:hover:not(.active) {
+  background-color: #f5f5f5;
+}

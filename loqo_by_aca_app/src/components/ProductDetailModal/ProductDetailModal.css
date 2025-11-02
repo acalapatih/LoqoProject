@@ -1,0 +1,183 @@
+/* Styling .modal-overlay, .modal-header, .close-button, 
+   .btn, .btn-primary, .btn-secondary, .status-badge
+   di-reuse dari CSS file lain (AdminDashboard.css / AddProductModal.css)
+*/
+
+.detail-modal-content {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 800px; /* Lebih lebar dari modal sukses */
+  padding: 1.5rem 2.5rem 2rem 2.5rem;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.detail-modal-body {
+  display: grid;
+  grid-template-columns: 300px 1fr; /* Kolom gambar 300px, sisanya info */
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+}
+
+.detail-image-container img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e6e9f0;
+}
+
+.detail-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 kolom untuk info */
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item.full-width {
+  grid-column: 1 / -1; /* Ambil lebar penuh */
+}
+
+.info-item label {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 0.25rem;
+}
+
+.info-item p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Kotak info stok abu-abu */
+.stock-info-box {
+  background-color: #f5f7fa; /* var(--bg-table-header) */
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stock-info-box label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.stock-info-box p {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0.25rem 0 0 0;
+}
+
+.perbarui-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ff7900; /* var(--color-orange) */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Form Update Stok */
+.stock-update-form {
+  border: 1px solid #e6e9f0; /* var(--color-border) */
+  border-radius: 8px;
+  padding: 1rem;
+}
+.stock-update-form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.update-controls {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.update-controls input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #e6e9f0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+.update-tabs {
+  display: flex;
+  border: 1px solid #e6e9f0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.update-tabs button {
+  flex: 1;
+  padding: 0.7rem;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #555;
+  transition: all 0.2s;
+}
+.update-tabs button:first-child {
+  border-right: 1px solid #e6e9f0;
+}
+.update-tabs button.active {
+  background-color: #fff6e6; /* Oranye muda */
+  color: #ff7900;
+  font-weight: 600;
+}
+
+.update-actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.75rem;
+}
+/* Tombol di form update lebih kecil */
+.update-actions .btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+
+/* Alert Sukses */
+.success-alert {
+  background-color: #e8f5e9; /* Hijau muda */
+  color: #388e3c; /* Hijau tua */
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.close-alert-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #388e3c;
+  cursor: pointer;
+  line-height: 1;
+}

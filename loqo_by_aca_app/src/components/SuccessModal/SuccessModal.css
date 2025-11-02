@@ -1,0 +1,78 @@
+/* Styling .modal-overlay di-reuse dari AddProductModal.css */
+
+.success-modal-content {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 16px; /* Sesuai gambar, lebih bulat */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  
+  /* Animasi sederhana */
+  animation: modal-pop-in 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes modal-pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.success-icon-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.success-icon-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: #e8f5e9; /* Warna hijau muda */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-icon-check {
+  font-size: 2.5rem;
+  color: #4caf50; /* Warna hijau tua */
+  font-weight: bold;
+  line-height: 1;
+  margin-top: -3px; /* Penyesuaian posisi checkmark */
+}
+
+.success-modal-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 0;
+}
+
+.success-modal-content p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0 0 2rem 0;
+  line-height: 1.6;
+}
+
+.btn-close-success {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #e6e9f0; /* var(--color-border) */
+  border-radius: 8px;
+  background-color: #ffffff; /* var(--color-bg-page) */
+  color: #1a1a1a; /* var(--color-text-primary) */
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-close-success:hover {
+  background-color: #f9f9f9;
+}

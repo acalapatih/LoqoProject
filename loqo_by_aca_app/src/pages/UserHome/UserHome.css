@@ -1,0 +1,259 @@
+/* Variabel Warna */
+:root {
+  --color-orange: #ff7900;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #555;
+  --color-border: #e6e9f0;
+  --color-bg-light: #f5f7fa;
+}
+
+/* ===== Header & Hero ===== */
+.home-header {
+  position: relative;
+  height: 400px; /* Tinggi hero section */
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+.hero-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay gelap */
+  z-index: -1;
+}
+
+/* Navigasi di dalam header */
+.home-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2.5rem;
+}
+
+.home-logo {
+  height: 30px;
+  width: auto;
+}
+
+.home-user-menu {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Konten Hero */
+.hero-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Search Bar */
+.home-search-bar {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 25px; /* Bulat penuh */
+  overflow: hidden;
+}
+
+.home-search-bar input {
+  flex-grow: 1;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  outline: none;
+  color: var(--color-text-primary);
+}
+
+.home-search-bar button {
+  border: none;
+  background-color: var(--color-orange);
+  color: white;
+  padding: 0 1.2rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Konten Utama (Rekomendasi) ===== */
+.home-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+  font-size: 1.75rem;
+  color: var(--color-text-primary);
+  margin: 0 0 0.25rem 0;
+}
+
+.section-header p {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.btn-view-all {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap; /* Mencegah tombol pecah baris */
+}
+
+/* ===== Product Grid ===== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 kolom */
+  gap: 1.5rem;
+}
+
+/* Kartu Produk */
+.product-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-card-content {
+  padding: 1rem;
+}
+
+.product-card-content h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 0.5rem 0;
+  /* Batasi 2 baris */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 2.5rem; /* (font-size * line-height * 2) */
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.discount {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #d9534f;
+  background-color: #fdeeee;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+.product-stats {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+/* ===== Responsif ===== */
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* 1 kolom */
+  }
+  .home-nav {
+    padding: 1rem;
+  }
+  .home-content {
+    padding: 1.5rem;
+  }
+}

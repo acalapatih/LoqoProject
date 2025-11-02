@@ -1,0 +1,205 @@
+/* Navigasi di atas */
+.home-nav-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  border-bottom: 1px solid #e6e9f0;
+  background-color: white;
+}
+.home-nav-detail .home-logo {
+  height: 30px;
+}
+.home-nav-detail .home-user-menu {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Layout Utama */
+.detail-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 2.5rem auto;
+  padding: 0 2.5rem;
+}
+
+/* Kolom Kiri: Gambar */
+.detail-images .main-image-container {
+  border: 1px solid #e6e9f0;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+.detail-images .main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.thumbnail-gallery {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+.thumbnail-gallery img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid #e6e9f0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.thumbnail-gallery img:hover {
+  border-color: #aaa;
+}
+.thumbnail-gallery img.active {
+  border-color: var(--color-orange, #ff7900);
+}
+
+/* Kolom Kanan: Info */
+.detail-info h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+.info-stats {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.info-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+.info-price .price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+.info-price .discount {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #d9534f;
+  background-color: #fdeeee;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+.info-divider {
+  height: 1px;
+  background-color: #e6e9f0;
+  margin: 1.5rem 0;
+}
+
+/* Daftar Deskripsi (Pengiriman, Kuantitas) */
+.info-dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+.info-dl dt {
+  font-weight: 600;
+  color: #555;
+}
+.info-dl dd {
+  margin: 0;
+}
+.info-dl dd strong {
+  display: block;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+.info-dl dd small {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Pilihan Kuantitas */
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e6e9f0;
+  border-radius: 8px;
+  overflow: hidden;
+  width: fit-content;
+}
+.quantity-selector button {
+  background: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.quantity-selector button:hover {
+  background-color: #f5f7fa;
+}
+.quantity-selector span {
+  padding: 0.5rem 1.5rem;
+  border-left: 1px solid #e6e9f0;
+  border-right: 1px solid #e6e9f0;
+  font-weight: 600;
+}
+.stock-info {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Tombol Beli */
+.btn-buy {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--color-orange, #ff7900);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+}
+.btn-buy:hover {
+  background-color: #e67000;
+}
+
+/* Deskripsi di Bawah */
+.detail-description {
+  max-width: 1200px;
+  margin: 2.5rem auto;
+  padding: 2.5rem;
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid #e6e9f0;
+}
+.detail-description h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.detail-description p {
+  line-height: 1.7;
+  color: #333;
+}
+.detail-description ul {
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .detail-content {
+    grid-template-columns: 1fr;
+    margin-top: 1.5rem;
+  }
+  .detail-info h2 {
+    font-size: 1.75rem;
+  }
+}
